@@ -1,0 +1,19 @@
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+
+data = np.array([
+    [20, 20000],
+    [25, 30000],
+    [30, 40000],
+    [35, 50000],
+    [40, 60000]
+])
+
+scaler = MinMaxScaler()
+result = scaler.fit_transform(data)
+
+print("MinMaxScaler Output:")
+print(result)
+
+print("Minimum:", result.min())
+print("Maximum:", result.max())
